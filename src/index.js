@@ -20,10 +20,10 @@ let port = process.env.PORT || 4000;
 
 app.post("/login", login);
 
-app.listen(9000, async (req, res) => {
+app.listen(port, async (req, res) => {
   try {
     await connect();
-    console.log("connected on port 9000");
+    console.log(`connected on port ${port}`);
   } catch (error) {
     console.log(error.message);
   }
